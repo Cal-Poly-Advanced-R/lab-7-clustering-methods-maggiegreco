@@ -1,6 +1,15 @@
-library(dplyr)
-library(philentropy)
-library(ggdendro)
+#' Implements simple linear regression by hand
+#'
+#' @param x A data frame
+#' @param k sample size for initial clustersnumber of iterations
+#' @param iters number of iterations
+#'
+#' @return A data frame
+#'
+#' @import ggdendro
+#' @import dplyr
+#'
+#' @export
 k_means <- function (x, k, iters){
 
   centroids <- sample(x,k, replace = FALSE)
