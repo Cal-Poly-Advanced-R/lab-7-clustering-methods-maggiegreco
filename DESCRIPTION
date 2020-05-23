@@ -1,0 +1,24 @@
+Package: clust431
+Title: Basic clustering implemented by hand
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "First",
+           family = "Last",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Implements k-means and hierarchical clustering.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.0
+Imports: 
+    magrittr,
+    ggplot2,
+    dplyr,
+    tidyr,
+    rlang,
+    ggdendro
+Suggests: 
+    testthat
