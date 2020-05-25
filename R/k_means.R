@@ -31,6 +31,5 @@ k_means <- function (x, k){
 return(centroids)
 }
 
-k_means(iris[,1:4], k =3)
 
 
