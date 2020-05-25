@@ -30,25 +30,27 @@ install.packages("clust431")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows what the original kmeans function would output:
 
 ```{r example}
+kmeans(iris[,1:4], 3)
+```
+
+This is a example shows what the my k_means function would output:
+```{r example}
 library(clust431)
-## basic example code
+k_means(iris[,1:4], 3)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+This is a basic example which shows what the original hclust function would output:
+```{r example}
+hclust(dist(iris[,1:4]), "complete")
 
-```{r cars}
-summary(cars)
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+This is a basic example which shows what my hier_clust function would output:
+```{r example}
+library(clust431)
+hier_clust(iris[,1:4])
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
 ```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
