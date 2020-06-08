@@ -32,23 +32,23 @@ install.packages("clust431")
 
 This is a basic example which shows what the original kmeans function would output:
 
-```{r example}
+```{r}
 kmeans(iris[,1:4], 3)
 ```
 
 This is a example shows what the my k_means function would output:
-```{r example}
+```{r}
 library(clust431)
 k_means(iris[,1:4], 3)
 ```
 
 This is a basic example which shows what the original hclust function would output:
-```{r example}
+```{r}
 hclust(dist(iris[,1:4]), "complete")
 ```
 
 This is a basic example which shows what my hier_clust function would output:
-```{r example}
+```{r}
 library(clust431)
 hier_clust(iris[,1:4])
 ```
