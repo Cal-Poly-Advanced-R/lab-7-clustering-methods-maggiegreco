@@ -10,7 +10,7 @@
 #' @import dplyr
 #'
 #' @export
-k_means <- function (x, k){
+kmeans <- function (x, k){
   eatmorchickn <- data.frame(matrix(0, k, ncol(x)))
   centchoice<- sample(1:nrow(x),k, replace = F)
   centroids <- x[centchoice,]
