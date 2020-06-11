@@ -13,28 +13,6 @@
 #'
 #'
 #'
-#this is a helper function  that finds the minimum of the matrix
-matrix_find_min <- function(matr){
-
-  mymin <- Inf
-  myindex <- c(0,0)
-
-  for (i in 1:nrow(matr)){
-
-    for (j in 1:ncol(matr)){
-
-      if (matr[i,j] < mymin){
-        mymin <- matr[i,j]
-        myindex <- data.frame(t(c(j,i)))
-        row.names(myindex) <- c(-j)
-
-      }
-
-    }
-
-  }
-  return(myindex)
-}
 
 
 hier_clust <- function(dataset){
@@ -63,5 +41,31 @@ hier_clust <- function(dataset){
 }
 
 
+#' Finds minimum of matrix
+#'
+#' @param matr matrix
+#'
+#'
+#' @return a data frame
+#this is a helper function  that finds the minimum of the matrix
+matrix_find_min <- function(matr){
 
-hier_clust(iris[,1:4])
+  mymin <- Inf
+  myindex <- c(0,0)
+
+  for (i in 1:nrow(matr)){
+
+    for (j in 1:ncol(matr)){
+
+      if (matr[i,j] < mymin){
+        mymin <- matr[i,j]
+        myindex <- data.frame(t(c(j,i)))
+        row.names(myindex) <- c(-j)
+
+      }
+
+    }
+
+  }
+  return(myindex)
+}
